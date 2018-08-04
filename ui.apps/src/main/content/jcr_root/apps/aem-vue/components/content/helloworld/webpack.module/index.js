@@ -1,8 +1,14 @@
 import Vue from 'vue';
+import HelloWorldChild from './HelloWorldChild.vue';
 
 Vue.component('hello-world', {
-	props: [ 'message' ],
-	template: `<div>My Message: {{ message }}</div>`
+	props: [ 'name' ],
+	components: {
+		'hello-world-child': HelloWorldChild
+	},
+	template: `<div>
+		<hello-world-child :message="name"></hello-world-child>
+	</div>`
 })
 
 new Vue({
