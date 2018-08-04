@@ -109,7 +109,10 @@ const WEBPACK_CONFIG_BASE = {
     modules: [
       CONFIG.aem.jcrRoot + '/apps/' + CONFIG.aem.projectFolderName + '/components/webpack.resolve/',
       NODE_MODULES,
-    ]
+    ],
+    alias: {
+      vue: 'vue/dist/vue.js'
+    }
   },
   watchOptions: {
     ignored: [

@@ -1,9 +1,10 @@
 import Vue from 'vue';
-// import HelloWorld from './helloworld.vue';
+
+Vue.component('hello-world', {
+	props: [ 'message' ],
+	template: `<div>My Message: {{ message }}</div>`
+})
 
 new Vue({
-	el: '#helloworld',
-	data: {
-		message: "Hello"
-	}
+	el: '#hello-world-app'
 });
