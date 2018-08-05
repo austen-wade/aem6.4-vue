@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <!-- <filter root="/conf/aem-vue"/>
+    <filter root="/conf/aem-vue"/>
     <filter root="/content/aem-vue"/>
-    <filter root="/content/dam/aem-vue"/> -->
+    <filter root="/content/dam/aem-vue"/>
 </workspaceFilter>

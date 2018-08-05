@@ -18,7 +18,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.austen.maven</groupId>
+        <groupId>com.example.maven</groupId>
         <artifactId>aem-vue</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
@@ -323,12 +323,12 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.austen.maven</groupId>
+            <groupId>com.example.maven</groupId>
             <artifactId>aem-vue.it.tests</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.austen.maven</groupId>
+            <groupId>com.example.maven</groupId>
             <artifactId>aem-vue.core</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

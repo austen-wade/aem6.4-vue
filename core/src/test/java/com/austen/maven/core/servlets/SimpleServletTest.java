@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package com.austen.maven.core.servlets;
+package com.example.maven.core.servlets;
 
 import org.apache.sling.testing.mock.sling.junit.SlingContext;
 import org.apache.sling.testing.mock.sling.servlet.MockSlingHttpServletRequest;

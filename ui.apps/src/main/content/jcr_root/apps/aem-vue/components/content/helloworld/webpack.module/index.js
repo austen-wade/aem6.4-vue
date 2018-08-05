@@ -13,10 +13,20 @@ Vue.component('hello-world-connector', {
 	template: `
 	<two-column>
 		<template slot="column-one">
-			<hello-world-component :message="colOneMessage"><slot name="slot-one"></slot></hello-world-component>
+			<hello-world-component :message="colOneMessage">
+				<template>
+					<p>This is a Vue Component</p>
+				</template>
+			</hello-world-component>
 		</template>
 		<template slot="column-two">
-			<hello-world-component :message="colTwoMessage"><slot slot-two></slot></hello-world-component>
+			<hello-world-component :message="colTwoMessage">
+				<template>
+					<p>
+						This vue component has multiple slots in it and passes two AEM props
+					</p>
+				</template>
+			</hello-world-component>
 		</template>
 	</two-column>
 	`

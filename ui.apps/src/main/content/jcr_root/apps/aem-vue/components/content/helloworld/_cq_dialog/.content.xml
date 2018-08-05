@@ -11,12 +11,12 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <text
+                    <col-one-message
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="Column One Message"
                         name="./colOneMessage"/>
-                    <text
+                    <col-two-message
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="Column Two Message"
