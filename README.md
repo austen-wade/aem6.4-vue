@@ -14,7 +14,7 @@ Each `webpack.module` folder should have an `index.js` file that eventually gets
 
 Vue components can be registered inside of the `index.js` file with `Vue.component ('my-example', { ... })'`, however, complications arise when using Single File Components (SFCs, example: `HelloWorld.vue`) as the Vue root isn't able to pass AEM props to the SFCs directly from HTL. To circumvent this, a "Connector Component" can be used. The example [Hello World Component](https://github.com/austen-wade/aem6.4-vue/tree/master/ui.apps/src/main/content/jcr_root/apps/aem-vue/components/content/helloworld) uses such an approach. The Connector Component can be used to simply pass props to a single SFC or create more complex setups with multiple components/slots.
 
-To render Vue components, the function `activateVue()` can be called. This is a globally available function, stored inside of `webpack.resolve/utils.js` ( can be imported using `import { activateVue } from 'js/utils'` ). `activateVue()` looks for `[data-component]` on your Vue components used in the HTL. **You must have the `data-component` attribute on your Vue components used in the HTL or they will not render.** Exploring different rendering strategies for production websites is highly recommended.
+To render Vue components, the function `activateVue()` can be called. This is a globally available function, stored inside of `webpack.resolve/utils.js` ( can be imported using `import { activateVue } from 'js/utils'` ). `activateVue()` looks for `[data-component]` on your Vue components used in the HTL. **You must have the `data-component` attribute on your Vue components used in the HTL or they will not render.** Exploring different rendering strategies for production websites is recommended.
 
 ## Modules
 
