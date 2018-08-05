@@ -1,6 +1,19 @@
-# Sample AEM project template
+# Adobe Experience Manager with Vue
+[This project was setup using Infield Digital's AEM with Webpack setup.](https://github.com/infielddigital/aem-webpack-example)
 
-This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
+## Getting Started
+Vue components are stored either in `webpack.resolve/js` for global availability or `webpack.module` folders inside of invidual components. Once you've built the project from the root folder using Maven, you can run AEM Front and Webpack from the `webpack.core` folder, [found here](https://github.com/austen-wade/aem6.4-vue/tree/master/ui.apps/src/main), with the `npm run start` command.
+
+[See Infield Digital's aem-webpack-example repo for more instruction on how Webpack integrates with AEM](https://github.com/infielddigital/aem-webpack-example)
+
+## Connecting AEM to Vue
+[Example component](https://github.com/austen-wade/aem6.4-vue/tree/master/ui.apps/src/main/content/jcr_root/apps/aem-vue/components/content/helloworld)
+
+Each `webpack.module` folder should have an `index.js` file that eventually gets bundled into the resulting Javascript of the site. This is where you should be defining Vue components for corresponding AEM components.
+
+Vue components can be registered inside of the `index.js` file `Vue.component ('my-example', { ... })'`, however, complications arise when using Single File Components as the Vue root isn't able to pass AEM props to the SFCs directly from HTL. To circumvent this, a "Connector Component" can be used. The example [Hello World Component](https://github.com/austen-wade/aem6.4-vue/tree/master/ui.apps/src/main/content/jcr_root/apps/aem-vue/components/content/helloworld) uses such an approach. The Connector Component can be used to simply pass props to a single SFC or create more complex setups with multiple components/slots.
+
+To render Vue components, the function `activateVue()` can be called. This is a globally available function, stored inside of `webpack.resolve/utils.js` ( can be imported using `import { activateVue } from 'js/utils'` ).
 
 ## Modules
 
@@ -33,26 +46,3 @@ Or alternatively
 Or to deploy only the bundle to the author, run
 
     mvn clean install -PautoInstallBundle
-
-## Testing
-
-There are three levels of testing contained in the project:
-
-* unit test in core: this show-cases classic unit testing of the code contained in the bundle. To test, execute:
-
-    mvn clean test
-
-* server-side integration tests: this allows to run unit-like tests in the AEM-environment, ie on the AEM server. To test, execute:
-
-    mvn clean verify -PintegrationTests
-
-* client-side Hobbes.js tests: JavaScript-based browser-side tests that verify browser-side behavior. To test:
-
-    in the browser, open the page in 'Developer mode', open the left panel and switch to the 'Tests' tab and find the generated 'MyName Tests' and run them.
-
-
-## Maven settings
-
-The project comes with the auto-public repository configured. To setup the repository in your Maven settings, refer to:
-
-    http://helpx.adobe.com/experience-manager/kb/SetUpTheAdobeMavenRepository.html
