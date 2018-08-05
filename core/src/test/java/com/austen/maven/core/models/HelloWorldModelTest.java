@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package com.example.maven.core.models;
+package com.austen.maven.core.models;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;

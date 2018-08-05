@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import HelloWorld from './HelloWorld.vue';
-import { activateVue } from 'js/utils';
 import TwoColumn from 'js/TwoColumn.vue';
+import { activateVue } from 'js/utils';
 
 // Connector Component for Single File Component
 Vue.component('hello-world-connector', {

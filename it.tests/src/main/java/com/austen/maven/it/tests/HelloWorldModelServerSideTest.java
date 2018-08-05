@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package com.example.maven.it.tests;
+package com.austen.maven.it.tests;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -32,7 +32,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import com.example.maven.core.models.HelloWorldModel;
+import com.austen.maven.core.models.HelloWorldModel;
 
 /** 
  *  Test case which uses OSGi services injection

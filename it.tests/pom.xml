@@ -21,7 +21,7 @@
     <!-- P A R E N T  P R O J E C T  D E S C R I P T I O N                      -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>com.example.maven</groupId>
+        <groupId>com.austen.maven</groupId>
         <artifactId>aem-vue</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
@@ -90,7 +90,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.example.maven</groupId>
+            <groupId>com.austen.maven</groupId>
             <artifactId>aem-vue.core</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>bundle</type>

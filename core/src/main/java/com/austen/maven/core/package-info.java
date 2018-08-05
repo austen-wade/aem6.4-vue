@@ -14,6 +14,6 @@
  *  limitations under the License.
  */
 @Version("1.0")
-package com.example.maven.core;
+package com.austen.maven.core;
 
 import org.osgi.annotation.versioning.Version;
