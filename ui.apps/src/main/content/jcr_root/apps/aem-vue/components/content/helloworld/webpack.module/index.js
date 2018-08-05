@@ -5,7 +5,7 @@ import TwoColumn from 'js/TwoColumn.vue';
 
 // Connector Component for Single File Component
 Vue.component('hello-world-connector', {
-	props: [ 'colOneMesssage', 'colTwoMesssage' ],
+	props: [ 'colOneMessage', 'colTwoMessage' ],
 	components: {
 		'hello-world-component': HelloWorld,
 		'two-column': TwoColumn
@@ -16,7 +16,7 @@ Vue.component('hello-world-connector', {
 			<hello-world-component :message="colOneMessage"><slot name="slot-one"></slot></hello-world-component>
 		</template>
 		<template slot="column-two">
-			<hello-world-component :message="colTwoMesssage"><slot slot-two></slot></hello-world-component>
+			<hello-world-component :message="colTwoMessage"><slot slot-two></slot></hello-world-component>
 		</template>
 	</two-column>
 	`
