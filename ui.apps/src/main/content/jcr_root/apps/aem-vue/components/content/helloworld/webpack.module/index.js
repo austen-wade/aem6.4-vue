@@ -11,6 +11,8 @@ Vue.component('hello-world', {
 	</div>`
 })
 
-new Vue({
-	el: '#hello-world-app'
+document.querySelectorAll( '.hello-world-app' ).forEach(el => {
+	new Vue({
+		el: el
+	});
 });
