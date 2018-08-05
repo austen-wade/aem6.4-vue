@@ -3,4 +3,12 @@
     data-emptytext="Author Todo List Component Here." style="width: 100px"
     src="/libs/cq/ui/resources/0.gif" class="cq-placeholder" alt="Author Todo List Component Here." />
 
-<todo-list-connector data-component list-title="${ properties.title }"></todo-list-connector>
+<todo-list-connector
+    data-component
+    list-title="${ properties.title }">
+
+    <!-- Using slots, an HTL for loop could be placed here. This adds to the same list that Vue is creating. -->
+    <li>One</li>
+    <li>Two</li>
+
+</todo-list-connector>
