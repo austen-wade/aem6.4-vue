@@ -1,4 +1,4 @@
-# Adobe Experience Manager with Vue
+# Adobe Experience Manager 6.4 with Vue
 **This approach to integrating AEM with Vue has not been used in production.**
 
 This project was initialized with the [AEM Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype) and setup using concepts and code from [Infield Digital's AEM with Webpack,](https://github.com/infielddigital/aem-webpack-example) which allows us to use:
