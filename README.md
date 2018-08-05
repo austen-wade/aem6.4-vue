@@ -2,7 +2,7 @@
 **This approach to integrating AEM with Vue has not been used in production.**
 
 This project was initialized with the [AEM Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype) and setup using concepts and code from [Infield Digital's AEM with Webpack,](https://github.com/infielddigital/aem-webpack-example) which allows us to use:
-* AEM Front for fast front end development
+* [AEM Front](https://chrome.google.com/webstore/detail/aem-front-extension/cmpbphecgagbhhociicpakhddeagjlih) for fast front end development
 * Hot module replacement on Vue components
 * Advanced Webpack configuration
 * SCSS as style language inside of Vue's Single File Components, `.vue` files.
