@@ -16,3 +16,4 @@
 
 #base=webpack.bundles
 components.bundle.js
+components.js

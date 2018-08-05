@@ -4,7 +4,7 @@
     src="/libs/cq/ui/resources/0.gif" class="cq-placeholder" alt="Author Hello World Component Here." />
 
 <sly data-sly-use.hello="com.austen.maven.core.models.HelloWorldModel" data-sly-unwrap>
-    <div class="hello-world-app" message="Try your best">
+    <div data-component message="Try your best">
         <hello-world name="${ properties.text }"></hello-world>
     </div>
 </sly>

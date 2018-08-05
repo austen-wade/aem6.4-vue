@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import HelloWorldChild from './HelloWorldChild.vue';
+import { activateVue } from 'js/utils';
 
 Vue.component('hello-world', {
 	props: [ 'name' ],
@@ -11,8 +12,4 @@ Vue.component('hello-world', {
 	</div>`
 })
 
-document.querySelectorAll( '.hello-world-app' ).forEach(el => {
-	new Vue({
-		el: el
-	});
-});
+activateVue();
