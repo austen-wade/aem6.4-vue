@@ -1,14 +1,14 @@
 import Vue from 'vue';
-import HelloWorldChild from './HelloWorldChild.vue';
+import HelloWorld from './HelloWorld.vue';
 import { activateVue } from 'js/utils';
 
 // Connector Component for Single File Component
-Vue.component('hello-world', {
+Vue.component('hello-world-connector', {
 	props: [ 'name' ],
 	components: {
-		'hello-world-child': HelloWorldChild
+		'hello-world-component': HelloWorld
 	},
-	template: `<hello-world-child :message="name"></hello-world-child>`
+	template: `<hello-world-component :message="name"><slot></slot></hello-world-component>`
 })
 
 // Render Vue Components

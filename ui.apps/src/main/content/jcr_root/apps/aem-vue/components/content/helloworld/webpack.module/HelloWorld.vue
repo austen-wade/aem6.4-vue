@@ -2,6 +2,7 @@
     <div class="text">
         <h1>Hello World!</h1>
         <p>hello there: {{ message }}</p>
+        <slot></slot>
     </div>
 </template>
 
