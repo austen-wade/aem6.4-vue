@@ -1,7 +1,13 @@
 # Adobe Experience Manager with Vue
 **This approach to integrating AEM with Vue has not been used in production.**
 
-This project was initialized with the [AEM Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype) and setup using concepts and code from [Infield Digital's AEM with Webpack.](https://github.com/infielddigital/aem-webpack-example)
+This project was initialized with the [AEM Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype) and setup using concepts and code from [Infield Digital's AEM with Webpack,](https://github.com/infielddigital/aem-webpack-example) which allows us to use:
+* AEM Front for fast front end development
+* Hot module replacement on Vue components
+* Advanced Webpack configuration
+* SCSS as style language inside of Vue's Single File Components, `.vue` files.
+* Babel
+
 ## Getting Started
 Vue components are stored either in `webpack.resolve` for global availability or `webpack.module` folders inside of invidual components. Once you've built the project from the root folder using Maven, you can run AEM Front and Webpack from the `webpack.core` folder, [found here](https://github.com/austen-wade/aem6.4-vue/tree/master/ui.apps/src/main), with the `npm run start` command.
 
