@@ -1,8 +1,9 @@
 # Adobe Experience Manager with Vue
-[This project was setup using Infield Digital's AEM with Webpack setup.](https://github.com/infielddigital/aem-webpack-example)
+**This approach to integrating AEM with Vue has not been used in production**
 
+[This project was setup using Infield Digital's AEM with Webpack.](https://github.com/infielddigital/aem-webpack-example)
 ## Getting Started
-Vue components are stored either in `webpack.resolve/js` for global availability or `webpack.module` folders inside of invidual components. Once you've built the project from the root folder using Maven, you can run AEM Front and Webpack from the `webpack.core` folder, [found here](https://github.com/austen-wade/aem6.4-vue/tree/master/ui.apps/src/main), with the `npm run start` command.
+Vue components are stored either in `webpack.resolve` for global availability or `webpack.module` folders inside of invidual components. Once you've built the project from the root folder using Maven, you can run AEM Front and Webpack from the `webpack.core` folder, [found here](https://github.com/austen-wade/aem6.4-vue/tree/master/ui.apps/src/main), with the `npm run start` command.
 
 [See Infield Digital's aem-webpack-example repo for more instruction on how Webpack integrates with AEM](https://github.com/infielddigital/aem-webpack-example)
 
@@ -11,9 +12,9 @@ Vue components are stored either in `webpack.resolve/js` for global availability
 
 Each `webpack.module` folder should have an `index.js` file that eventually gets bundled into the resulting Javascript of the site. This is where you should be defining Vue components for corresponding AEM components.
 
-Vue components can be registered inside of the `index.js` file `Vue.component ('my-example', { ... })'`, however, complications arise when using Single File Components as the Vue root isn't able to pass AEM props to the SFCs directly from HTL. To circumvent this, a "Connector Component" can be used. The example [Hello World Component](https://github.com/austen-wade/aem6.4-vue/tree/master/ui.apps/src/main/content/jcr_root/apps/aem-vue/components/content/helloworld) uses such an approach. The Connector Component can be used to simply pass props to a single SFC or create more complex setups with multiple components/slots.
+Vue components can be registered inside of the `index.js` file with `Vue.component ('my-example', { ... })'`, however, complications arise when using Single File Components (SFCs, example: `HelloWorld.vue`) as the Vue root isn't able to pass AEM props to the SFCs directly from HTL. To circumvent this, a "Connector Component" can be used. The example [Hello World Component](https://github.com/austen-wade/aem6.4-vue/tree/master/ui.apps/src/main/content/jcr_root/apps/aem-vue/components/content/helloworld) uses such an approach. The Connector Component can be used to simply pass props to a single SFC or create more complex setups with multiple components/slots.
 
-To render Vue components, the function `activateVue()` can be called. This is a globally available function, stored inside of `webpack.resolve/utils.js` ( can be imported using `import { activateVue } from 'js/utils'` ).
+To render Vue components, the function `activateVue()` can be called. This is a globally available function, stored inside of `webpack.resolve/utils.js` ( can be imported using `import { activateVue } from 'js/utils'` ). Exploring different rendering strategies for production websites is highly recommended.
 
 ## Modules
 
